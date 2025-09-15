@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        background-color: hsl(217, 54%, 11%);
+        width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        background-color: hsl(216, 50%, 16%);
+        border-radius: 10px;
+        padding: 10px;
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .equilibrium {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 340px;
+        border-radius: 10px;
+      }
+      .avatar {
+        margin-left: 10px;
+        width: 40px;
+        border: 1px solid white;
+        border-radius: 50%;
+        margin-left: 20px;
+        margin-bottom: 5px;
+      }
+      h2 {
+        font-family: Outfit;
+        margin-left: 10px;
+        color: white;
+      }
+      .name {
+        font-family: Montserrat;
+        margin-left: 10px;
+        color: white;
+        margin-left: 180px;
+        margin-top: -50px;
+        margin-bottom: 30px;
+      }
+      p {
+        font-family: Montserrat;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        color: hsl(215, 51%, 70%);
+      }
+      .creation {
+        font-family: Montserrat;
+        margin-top: 10px;
+        margin-left: 80px;
+        margin-bottom: 30px;
+        margin-top: -40px;
+        color: hsl(215, 51%, 70%);
+      }
+      h3 {
+        font-family: Montserrat;
+        margin-left: 10px;
+        color: hsl(178, 100%, 50%);
+      }
+      .days {
+        font-family: Montserrat;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        color: hsl(215, 51%, 70%);
+        margin-left: 250px;
+        margin-top: -40px;
+        margin-bottom: 10px;
+      }
+      .line {
+        width: 320px;
+        border: 1px solid hsl(214, 37%, 25%);
+        margin-bottom: 10px;
+      }
+      .icon1 {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+      }
+      .icon2 {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+      }
+      .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 13px;
+      }
+      .name:hover {
+        color: hsl(178, 100%, 50%);
+      }
+      h2:hover {
+        color: hsl(178, 100%, 50%);
+      }
+      .equilibrium:hover {
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+      }
+      .view {
+        background-color: aqua;
+        opacity: 0;
+        padding: 146px;
+        border-radius: 10px;
+        margin-top: -340px;
+        margin-left: 10px;
+      }
+      .view:hover {
+        background-color: aqua;
+        opacity: 0.5;
+        padding: 146px;
+        border-radius: 10px;
+        /* margin-top: -400px; */
+        position: absolute;
+        opacity: 0.5;
+        /* top: 100px; */
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <img class="equilibrium" src="image-equilibrium.jpg" />
+        <img class="view" src="icon-view.svg" />
+      </div>
+      <!-- <img class="view" src="icon-view.svg" /> -->
+      <h2>Equilibrium #3429</h2>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div class="icons">
+        <div class="icon1">
+          <img src="icon-ethereum.svg" />
+          <p><b style="color: hsl(178, 100%, 50%)">0.041 ETH</b></p>
+        </div>
+        <div class="icon2">
+          <img src="icon-clock.svg" />
+          <p>3 days left</p>
+        </div>
+      </div>
+      <hr class="line" />
+      <div class="profile">
+        <img class="avatar" src="image-avatar.png" />
+        <p class="creation">Creation of</p>
+        <p class="name">Jules Wyvern</p>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
